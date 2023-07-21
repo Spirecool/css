@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: rgb(233, 233, 233);
+}
+.navigation {
+    position: fixed;
+    width: 60px;
+    height: 100%;
+    background: rgb(67, 8, 118);
+    transition: 0.5s;
+    overflow: hidden;
+}
+.navigation:hover,
+.navigation.active { /* classe du toggle actif */
+    width: 240px;
+}
+
+.navigation ul {
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.navigation ul li {
+    width: 100%;
+    list-style: none;
+}
+
+.navigation ul li:hover{
+    background: rgb(164, 84, 233);
+}
+
+.navigation ul li a{
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: #fff;
+}
+
+.navigation ul li a .title {
+    padding: 0 10px;
+    line-height: 60px;
+    text-align: start;
+    white-space: nowrap;
+}
+
+.navigation ul li a .title:hover {
+    color: rgb(67, 8, 118);
+}
+
+.navigation ul li a .icon{
+    min-width: 60px; /* permet de supprimer les noms de menus */
+    height: 60px;
+    line-height: 60px;
+    text-align: center; /* place les icônes au centre */
+}
+
+.navigation ul li a .icon .fa-solid {
+    font-size: 24px;
+    height: 60px;
+    line-height: 60px;
+    text-align: start;
+    white-space: nowrap;
+}
+
+.toggle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60px;
+    height: 60px;
+    border-radius: 4px;
+    background: rgb(67, 8, 118);
+    cursor: pointer;
+}
+
+.toggle.active {
+    background:  rgb(67, 8, 118);
+    transition: 0.6s;
+}
+
+.toggle::before {
+    content: '\f0c9'; /* unicode de l'icône */
+    font-family: fontAwesome;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    line-height: 60px;
+    text-align: center;
+    font-size: 24px;
+    color: white;
+}
+
+/* quand le toggle est actif, il affiche cette icône */
+.toggle.active::before {
+    content: '\f00d';
+    color: white;
+}
+
+/* En dessous 767px, la sidebar est masquée (sortie de l'écran) et s'affiche en cliquant sur le toggle */
+
+@media (max-width: 767px) {
+    .navigation {
+        left: -60px;
+    }
+
+    /* Pour avoir menu en plein écran en-dessous de 767px */
+    /* .navigation.active {
+        left: 0px;
+        width: 100%;
+    } */
+}
