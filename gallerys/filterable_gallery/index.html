@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title> CSS Grid </title>
+</head>
+<body>
+    <h1>Une galerie filtrable </h1>
+
+    
+    <div class="container">
+
+        <!-- Boutons de filtre  -->
+        <div class="filter-buttons">
+            <button data-name="all" class="active"> Tout </button>
+            <button data-name="afrique"> Afrique </button>
+            <button data-name="amerique"> Amérique </button>
+            <button data-name="europe"> Europe </button>
+        </div>
+    
+        <!-- Images -->
+        <div class="filterable-cards">
+            <div class="card" data-name="afrique"> <img src="/images/afrique1.jpg" alt=""> </div>
+            <div class="card" data-name="afrique"> <img src="/images/afrique2.jpg" alt=""> </div>
+            <div class="card" data-name="europe"> <img src="/images/europe3.jpg" alt=""> </div>
+            <div class="card" data-name="afrique"> <img src="/images/afrique3.jpg" alt=""> </div>
+            <div class="card" data-name="asie"> <img src="/images/asie1.jpg" alt=""> </div>
+            <div class="card" data-name="asie"> <img src="/images/asie2.jpg" alt=""> </div>
+            <div class="card" data-name="asie"> <img src="/images/asie3.jpg" alt=""> </div>
+            <div class="card" data-name="europe"> <img src="/images/europe1.jpg" alt=""> </div>
+            <div class="card" data-name="amerique"> <img src="/images/amerique1.jpg" alt=""> </div>
+            <div class="card" data-name="amerique"> <img src="/images/amerique2.jpg" alt=""> </div>
+            <div class="card" data-name="amerique"> <img src="/images/amerique3.jpg" alt=""> </div>
+            <div class="card" data-name="europe"> <img src="/images/europe2.jpg" alt=""> </div>
+        </div>
+
+    </div>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
